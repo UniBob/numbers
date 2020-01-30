@@ -31,57 +31,48 @@ public class SecondTask : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 sum++;
-                stepsAmount++;
-                if (sum<sumLimit) Debug.Log(sumFrase + sum.ToString());
+                UpdateSteps();
 
             }
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 sum+=2;
-                stepsAmount++;
-                if (sum < sumLimit) Debug.Log(sumFrase + sum.ToString());
+                UpdateSteps();
             }
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 sum+=3;
-                stepsAmount++;
-                if (sum < sumLimit) Debug.Log(sumFrase + sum.ToString());
+                UpdateSteps();
             }
             if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 sum+=4;
-                stepsAmount++;
-                if (sum < sumLimit) Debug.Log(sumFrase + sum.ToString());
+                UpdateSteps();
             }
             if (Input.GetKeyDown(KeyCode.Alpha5))
             {
                 sum+=5;
-                stepsAmount++;
-                if (sum < sumLimit) Debug.Log(sumFrase + sum.ToString());
+                UpdateSteps();
             }
             if (Input.GetKeyDown(KeyCode.Alpha6))
             {
                 sum+=6;
-                stepsAmount++;
-                if (sum < sumLimit) Debug.Log(sumFrase + sum.ToString());
+                UpdateSteps();
             }
             if (Input.GetKeyDown(KeyCode.Alpha7))
             {
-                sum+=7; 
-                stepsAmount++;
-                if (sum < sumLimit) Debug.Log(sumFrase + sum.ToString());
+                sum+=7;
+                UpdateSteps();
             }
             if (Input.GetKeyDown(KeyCode.Alpha8))
             {
                 sum+=8;
-                stepsAmount++;
-                if (sum < sumLimit) Debug.Log(sumFrase + sum.ToString());
+                UpdateSteps();
             }
             if (Input.GetKeyDown(KeyCode.Alpha9))
             {
                 sum+=9;
-                stepsAmount++;
-                if (sum < sumLimit) Debug.Log(sumFrase + sum.ToString());
+                UpdateSteps();
             }
             if (sum >= sumLimit)
             {
@@ -100,5 +91,11 @@ public class SecondTask : MonoBehaviour
             Debug.Log(hello);
             Debug.Log(sumFrase + sum.ToString());
         }
+    }
+
+    private void UpdateSteps()
+    {
+        stepsAmount++;
+        if (sum < sumLimit) Debug.Log(sumFrase + sum.ToString());
     }
 }
