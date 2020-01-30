@@ -69,12 +69,11 @@ public class GameScript : MonoBehaviour
                 access = true;
                 minNumber = 1;
                 maxNumber = 1080;
-                stepsAmount = 1;
-                currentNumber = (minNumber + maxNumber) / 2;
+                stepsAmount = 0;
                 Debug.Log(newGame + playerName + "!");
                 Debug.Log(question);
                 Debug.Log(min + minNumber.ToString() + max + maxNumber.ToString() + ".");
-                Debug.Log(variant + currentNumber.ToString() + "?");
+                UpdateNumber();
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
