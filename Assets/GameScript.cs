@@ -7,7 +7,7 @@ public class GameScript : MonoBehaviour
     int minNumber = 1;
     int maxNumber = 1080;
     int currentNumber;
-    int stepsAmount = 0;
+    int stepsAmount = 1;
 
     bool access = true;
 
@@ -24,11 +24,11 @@ public class GameScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentNumber = (minNumber + maxNumber) / 2;
         Debug.Log(hello + playerName+"!");
         Debug.Log(question);
         Debug.Log(min + minNumber.ToString() + max + maxNumber.ToString()+".");
-        UpdateNumber();
+        Debug.Log(variant + currentNumber.ToString()+"?");
     }
 
     // Update is called once per frame
@@ -39,7 +39,9 @@ public class GameScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 minNumber = currentNumber;
-                UpdateNumber();
+                currentNumber = (minNumber + maxNumber) / 2;
+                stepsAmount++;
+                Debug.Log(variant + currentNumber.ToString() + "?");
             }
             else
             {
@@ -47,7 +49,9 @@ public class GameScript : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.DownArrow))
                 {
                     maxNumber = currentNumber;
-                    UpdateNumber();
+                    currentNumber = (minNumber + maxNumber) / 2;
+                    stepsAmount++;
+                    Debug.Log(variant + currentNumber.ToString() + "?");
                 }
                 else
                 {
@@ -83,10 +87,4 @@ public class GameScript : MonoBehaviour
         }
     }
 
-    private void UpdateNumber()
-    {
-        currentNumber = (minNumber + maxNumber) / 2;
-        stepsAmount++;
-        Debug.Log(variant + currentNumber.ToString() + "?");
-    }
 }
