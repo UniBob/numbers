@@ -30,53 +30,45 @@ public class SecondTask : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                sum++;
-                UpdateSteps();
+                UpdateSteps(1);
 
-            }
+            }else
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                sum+=2;
-                UpdateSteps();
-            }
+                UpdateSteps(2);
+            }else
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                sum+=3;
-                UpdateSteps();
-            }
+                UpdateSteps(3);
+            }else
             if (Input.GetKeyDown(KeyCode.Alpha4))
             {
-                sum+=4;
-                UpdateSteps();
-            }
+                UpdateSteps(4);
+            }else
             if (Input.GetKeyDown(KeyCode.Alpha5))
             {
-                sum+=5;
-                UpdateSteps();
-            }
+                UpdateSteps(5);
+            }else
             if (Input.GetKeyDown(KeyCode.Alpha6))
             {
-                sum+=6;
-                UpdateSteps();
-            }
+                UpdateSteps(6);
+            }else
             if (Input.GetKeyDown(KeyCode.Alpha7))
             {
-                sum+=7;
-                UpdateSteps();
-            }
+                UpdateSteps(7);
+            }else
             if (Input.GetKeyDown(KeyCode.Alpha8))
             {
-                sum+=8;
-                UpdateSteps();
-            }
+                UpdateSteps(8);
+            }else
             if (Input.GetKeyDown(KeyCode.Alpha9))
             {
-                sum+=9;
-                UpdateSteps();
+                UpdateSteps(9);
             }
+
             if (sum >= sumLimit)
             {
-                Debug.Log(finish);
+                Debug.Log(finish + sum);
                 Debug.Log(steps + stepsAmount.ToString());
                 isGameRunning = false;
             }
@@ -93,8 +85,9 @@ public class SecondTask : MonoBehaviour
         }
     }
 
-    private void UpdateSteps()
+    private void UpdateSteps(int count)
     {
+        sum += count;
         stepsAmount++;
         if (sum < sumLimit) Debug.Log(sumFrase + sum.ToString());
     }
