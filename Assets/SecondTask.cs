@@ -31,37 +31,36 @@ public class SecondTask : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 UpdateSteps(1);
-
-            }else
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 UpdateSteps(2);
-            }else
-            if (Input.GetKeyDown(KeyCode.Alpha3))
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 UpdateSteps(3);
-            }else
-            if (Input.GetKeyDown(KeyCode.Alpha4))
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 UpdateSteps(4);
-            }else
-            if (Input.GetKeyDown(KeyCode.Alpha5))
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha5))
             {
                 UpdateSteps(5);
-            }else
-            if (Input.GetKeyDown(KeyCode.Alpha6))
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha6))
             {
                 UpdateSteps(6);
-            }else
-            if (Input.GetKeyDown(KeyCode.Alpha7))
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha7)) 
             {
                 UpdateSteps(7);
-            }else
-            if (Input.GetKeyDown(KeyCode.Alpha8))
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha8)) 
             {
                 UpdateSteps(8);
-            }else
-            if (Input.GetKeyDown(KeyCode.Alpha9))
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha9)) 
             {
                 UpdateSteps(9);
             }
